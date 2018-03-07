@@ -1,0 +1,25 @@
+---
+title: "Some Plots"
+author: "Jacob Woolley"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r}
+library(WoolleyFirstTools)
+library(ggplot2)
+print(Tools_gg(AAF,"arr_delay","dep_delay",geom_point()))
+print(Tools_gg(AAF,"arr_delay","dep_delay",geom_point(alpha =.2)))
+print(Tools_gg(AAF,"arr_delay","dep_delay",geom_line()))
+```
